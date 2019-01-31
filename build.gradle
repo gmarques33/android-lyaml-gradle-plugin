@@ -1,0 +1,38 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.20'
+    id 'com.gradle.plugin-publish' version '0.10.0'
+}
+
+dependencies {
+    compileOnly gradleApi()
+    implementation localGroovy()
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.20'
+    implementation "org.yaml:snakeyaml:1.21"
+}
+
+repositories {
+    jcenter()
+}
+
+group = GROUP
+version = VERSION_NAME
+
+pluginBundle {
+    website = POM_URL
+    vcsUrl = POM_SCM_URL
+    description = POM_DESCRIPTION
+    tags = ['HubSpot', 'i18n', 'lyaml', 'localization']
+}
+
+gradlePlugin {
+    plugins {
+        hubspotLocalizationPlugin {
+            id = 'com.hubspot.android.localization'
+            displayName = POM_NAME
+            description = POM_DESCRIPTION
+            implementationClass = 'com.hubspot.android.localization.HubSpotLocalizationPlugin'
+        }
+    }
+}

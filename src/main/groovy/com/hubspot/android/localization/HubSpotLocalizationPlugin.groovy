@@ -2,11 +2,13 @@ package com.hubspot.android.localization
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import com.hubspot.android.localization.I18nKotlinGeneratorTask
+import com.hubspot.android.localization.I18nXmlGeneratorTask
 
 class HubSpotLocalizationPlugin implements Plugin<Project> {
 
     void apply(Project parentProject) {
-        subprojects {
+        parentProject.subprojects {
             afterEvaluate { project ->
 
                 def baseVariant = null

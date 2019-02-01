@@ -1,4 +1,4 @@
-package com.hubspot.android.localization
+package com.i18n.community.localization
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input

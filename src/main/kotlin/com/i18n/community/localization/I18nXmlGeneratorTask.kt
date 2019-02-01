@@ -1,4 +1,4 @@
-package com.hubspot.android.localization
+package com.i18n.community.localization
 
 import org.yaml.snakeyaml.Yaml
 import java.io.File

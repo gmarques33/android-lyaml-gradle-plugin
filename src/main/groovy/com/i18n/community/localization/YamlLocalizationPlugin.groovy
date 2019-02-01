@@ -1,11 +1,11 @@
-package com.hubspot.android.localization
+package com.i18n.community.localization
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import com.hubspot.android.localization.I18nKotlinGeneratorTask
-import com.hubspot.android.localization.I18nXmlGeneratorTask
+import com.i18n.community.localization.I18nKotlinGeneratorTask
+import com.i18n.community.localization.I18nXmlGeneratorTask
 
-class HubSpotLocalizationPlugin implements Plugin<Project> {
+class YamlLocalizationPlugin implements Plugin<Project> {
 
     void apply(Project parentProject) {
         parentProject.subprojects {
